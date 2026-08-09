@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>کابینت البرز | طراحی و اجرای کابینت آشپزخانه و دکوراسیون داخلی، بندرعباس</title>
+<meta name="description" content="کابینت البرز — زیرمجموعه‌ی گروه صنعتی البرز در بندرعباس، فعال در طراحی و اجرای کابینت آشپزخانه، کار با MDF و PVC، دکوراسیون داخلی و آینه‌های دکوراتیو.">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/favicon-180.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Shared SVG sprite: the Alborz ridge mark, reused as logo / footer / badge icon -->
+<svg style="display:none" aria-hidden="true">
+  <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="icon-pin" viewBox="0 0 24 24"><path d="M12 22s7-7.58 7-13a7 7 0 10-14 0c0 5.42 7 13 7 13z" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="12" cy="9" r="2.4" stroke="currentColor" stroke-width="1.5" fill="none"/></symbol>
+  <symbol id="icon-phone" viewBox="0 0 24 24"><path d="M6.5 3h3l1.7 5-2.4 2a13 13 0 006.2 6.2l2-2.4 5 1.7v3a2 2 0 01-2.1 2C11.8 20.9 3.1 12.2 3 4.6A2 2 0 016.5 3z" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linejoin="round"/></symbol>
+  <symbol id="icon-insta" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor"/></symbol>
+  <symbol id="icon-check" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 7" stroke="currentColor" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="icon-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="icon-cabinet" viewBox="0 0 48 48"><rect x="6" y="6" width="36" height="36" rx="1" stroke="currentColor" stroke-width="1.6" fill="none"/><line x1="24" y1="6" x2="24" y2="42" stroke="currentColor" stroke-width="1.6"/><line x1="6" y1="24" x2="42" y2="24" stroke="currentColor" stroke-width="1.6"/><circle cx="19" cy="15" r="1.4" fill="currentColor"/><circle cx="29" cy="33" r="1.4" fill="currentColor"/></symbol>
+  <symbol id="icon-decor" viewBox="0 0 48 48"><path d="M8 40 L24 8 L40 40 Z" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linejoin="round"/><line x1="16" y1="24" x2="32" y2="24" stroke="currentColor" stroke-width="1.6"/></symbol>
+  <symbol id="icon-panel" viewBox="0 0 48 48"><rect x="7" y="7" width="34" height="34" stroke="currentColor" stroke-width="1.6" fill="none"/><line x1="7" y1="17.6" x2="41" y2="17.6" stroke="currentColor" stroke-width="1.2"/><line x1="7" y1="28.3" x2="41" y2="28.3" stroke="currentColor" stroke-width="1.2"/><line x1="17.6" y1="7" x2="17.6" y2="41" stroke="currentColor" stroke-width="1.2"/><line x1="30.3" y1="7" x2="30.3" y2="41" stroke="currentColor" stroke-width="1.2"/></symbol>
+  <symbol id="icon-mirror" viewBox="0 0 48 48"><ellipse cx="24" cy="22" rx="15" ry="18" stroke="currentColor" stroke-width="1.6" fill="none"/><line x1="24" y1="40" x2="24" y2="44" stroke="currentColor" stroke-width="1.6"/><line x1="17" y1="44" x2="31" y2="44" stroke="currentColor" stroke-width="1.6"/></symbol>
+</svg>
+
+<!-- ============================= HEADER ============================= -->
+<header class="site-header" id="siteHeader">
+  <div class="wrap">
+    <div class="nav-glass glass">
+      <a href="#home" class="brand">
+        <img src="images/logo-ivory.png" alt="ALBORZ GROUP" class="brand-logo">
+        <span class="brand-fa">کابینت البرز</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#home">خانه</a>
+        <a href="#services">خدمات</a>
+        <a href="#projects">پروژه‌ها</a>
+        <a href="#about">درباره ما</a>
+        <a href="#contact">تماس</a>
+      </nav>
+
+      <div class="nav-cta">
+        <a href="#projects" class="btn btn-line btn-sm">مشاهده پروژه‌ها</a>
+        <a href="#contact" class="btn btn-gold btn-sm">تماس با ما</a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="باز کردن منو">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-panel glass-dark" id="mobilePanel">
+  <a href="#home">خانه</a>
+  <a href="#services">خدمات</a>
+  <a href="#projects">پروژه‌ها</a>
+  <a href="#about">درباره ما</a>
+  <a href="#contact">تماس</a>
+  <a href="#contact" class="btn btn-gold">تماس با ما</a>
+</div>
+
+<!-- ============================= HERO ============================= -->
+<section class="hero" id="home">
+  <div class="hero-media">
+    <img src="images/hero-mountain.jpg" alt="رشته‌کوه البرز، ایران">
+  </div>
+  <div class="hero-scrim"></div>
+
+  <div class="hero-content">
+    <div class="wrap">
+      <span class="hero-eyebrow">ALBORZ GROUP — BANDAR ABBAS</span>
+      <h1 class="hero-logo-wrap"><img src="images/logo-ivory.png" alt="ALBORZ GROUP — کابینت البرز" class="hero-logo"></h1>
+      <div class="hero-fa">کابینت البرز</div>
+      <p class="hero-tagline">
+        طراحی و اجرای کابینت آشپزخانه، دکوراسیون داخلی، کار با MDF و PVC و آینه‌های دکوراتیو —
+        با نگاهی که استحکام و دقت را از دل کوه البرز به فضای زندگی شما می‌آورد.
+      </p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-gold">تماس با ما <svg><use href="#icon-arrow"/></svg></a>
+        <a href="#projects" class="btn btn-line">مشاهده پروژه‌ها</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <span>اسکرول</span>
+    <span class="line"></span>
+  </div>
+</section>
+
+<!-- ============================= SERVICES ============================= -->
+<section class="services" id="services">
+  <div class="services-blob b1"></div>
+  <div class="services-blob b2"></div>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">خدمات ما</span>
+      <h2>چهار حوزه‌ی اصلی فعالیت</h2>
+      <p>گروه صنعتی البرز، در شاخه‌ی کابینت‌سازی و دکوراسیون داخلی، این خدمات را برای فضاهای مسکونی طراحی و اجرا می‌کند.</p>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="services-grid reveal-stagger">
+      <div class="service-card">
+        <svg class="icon"><use href="#icon-cabinet"/></svg>
+        <div class="service-num">۰۱</div>
+        <h3>کابینت آشپزخانه</h3>
+        <p>طراحی و ساخت کابینت آشپزخانه با چوب، MDF و PVC، متناسب با فضا و سلیقه‌ی هر خانه.</p>
+      </div>
+      <div class="service-card">
+        <svg class="icon"><use href="#icon-decor"/></svg>
+        <div class="service-num">۰۲</div>
+        <h3>دکوراسیون داخلی</h3>
+        <p>اجرای عناصر داخلی برای فضاهای مسکونی، با دقت در جزئیات و هماهنگی با معماری خانه.</p>
+      </div>
+      <div class="service-card">
+        <svg class="icon"><use href="#icon-panel"/></svg>
+        <div class="service-num">۰۳</div>
+        <h3>کار با MDF و PVC</h3>
+        <p>برش، رنگ‌آمیزی و اجرای تخصصی سازه‌های MDF و PVC برای کاربردهای متنوع داخلی.</p>
+      </div>
+      <div class="service-card">
+        <svg class="icon"><use href="#icon-mirror"/></svg>
+        <div class="service-num">۰۴</div>
+        <h3>آینه‌های دکوراتیو</h3>
+        <p>طراحی و ساخت آینه‌های دکوراتیو، به‌عنوان مکملی برای دکوراسیون داخلی.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= STORY / BRAND ============================= -->
+<section class="story" id="brand">
+  <div class="wrap">
+    <div class="story-media reveal">
+      <div class="frame">
+        <img src="images/mountain-bw.jpg" alt="قله‌ی برف‌گرفته‌ی البرز">
+      </div>
+    </div>
+    <div class="story-copy reveal">
+      <span class="eyebrow">نام و نشان</span>
+      <p class="story-quote">
+        «البرز» را <span class="accent">حیدر صمیمی در سال ۱۳۴۶ در بندرعباس</span> بنیان گذاشت —
+        نامی از رشته‌کوهی که قله‌هایش، از جمله دماوند، همیشه به‌هم پیوسته‌اند؛
+        درست همان‌طور که او آرزو داشت خانواده‌اش نسل به نسل، در کنار هم، این راه را ادامه دهند.
+      </p>
+      <p class="lede">
+        این مجموعه از سر اجبار مالی شکل نگرفت؛ از عشقی بود که بنیان‌گذارش به صنعت داشت —
+        و همین عشق، طی بیش از نیم قرن، آن را به یکی از شناخته‌شده‌ترین نام‌های صنعتی هرمزگان تبدیل کرد.
+        کابینت البرز، شاخه‌ی کابینت‌سازی و دکوراسیون داخلی همین خانواده، همان نگاه را دنبال می‌کند.
+      </p>
+      <div class="story-meta">
+        <div>
+          <span class="label">سال تأسیس</span>
+          <span class="val">۱۳۴۶</span>
+        </div>
+        <div>
+          <span class="label">بنیان‌گذار</span>
+          <span class="val">حیدر صمیمی</span>
+        </div>
+        <div>
+          <span class="label">محل فعالیت</span>
+          <span class="val">بندرعباس</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= PROJECTS ============================= -->
+<section class="projects" id="projects">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="head-text">
+        <span class="eyebrow">نمونه‌کارها</span>
+        <h2>پروژه‌های اجراشده</h2>
+      </div>
+      <div class="filter-tabs" id="filterTabs">
+        <button class="active" data-filter="all">همه</button>
+        <button data-filter="classic">کابینت کلاسیک</button>
+        <button data-filter="modern">کابینت مدرن</button>
+        <button data-filter="wardrobe">کمد دیواری</button>
+      </div>
+    </div>
+
+    <div class="gallery-grid" id="galleryGrid">
+      <div class="gallery-item wide show" data-category="classic" data-caption="آشپزخانه کلاسیک، طلایی و سفید">
+        <div class="ph"><img src="images/kitchen-classic-1.jpg" alt="کابینت آشپزخانه کلاسیک سفید و طلایی"></div>
+        <div class="cap"><div class="tag">کابینت کلاسیک</div><div class="name">آشپزخانه کلاسیک، طلایی و سفید</div></div>
+      </div>
+
+      <div class="gallery-item show" data-category="classic" data-caption="کابینت با روکش گلاس و دستگیره برنجی">
+        <div class="ph"><img src="images/kitchen-classic-3.jpg" alt="کابینت آشپزخانه با روکش گلاس و دستگیره برنجی"></div>
+        <div class="cap"><div class="tag">کابینت کلاسیک</div><div class="name">روکش گلاس و دستگیره برنجی</div></div>
+      </div>
+
+      <div class="gallery-item show" data-category="modern" data-caption="کابینت مینیمال با روکش چوب طبیعی">
+        <div class="ph"><img src="images/kitchen-modern-1.jpg" alt="کابینت آشپزخانه مدرن با روکش چوب"></div>
+        <div class="cap"><div class="tag">کابینت مدرن</div><div class="name">مینیمال، با روکش چوب طبیعی</div></div>
+      </div>
+
+      <div class="gallery-item show" data-category="wardrobe" data-caption="کمد دیواری سفید با روکش چوب">
+        <div class="ph"><img src="images/wardrobe-1.jpg" alt="کمد دیواری سفید با روکش چوب"></div>
+        <div class="cap"><div class="tag">کمد دیواری</div><div class="name">سفید، با روکش چوب طبیعی</div></div>
+      </div>
+
+      <div class="gallery-item show" data-category="classic" data-caption="نورپردازی و کانتر سنگی">
+        <div class="ph"><img src="images/kitchen-classic-2.jpg" alt="کابینت آشپزخانه کلاسیک با نورپردازی و کانتر سنگی"></div>
+        <div class="cap"><div class="tag">کابینت کلاسیک</div><div class="name">نورپردازی و کانتر سنگی</div></div>
+      </div>
+
+      <div class="gallery-item show" data-category="modern" data-caption="کانتر چوبی و کابینت مات خاکستری">
+        <div class="ph"><img src="images/kitchen-modern-2.jpg" alt="کابینت آشپزخانه مدرن، مات خاکستری با کانتر چوبی"></div>
+        <div class="cap"><div class="tag">کابینت مدرن</div><div class="name">کانتر چوبی و کابینت مات</div></div>
+      </div>
+
+      <div class="gallery-item wide show" data-category="modern" data-caption="اجرای آشپزخانه مدرن، در حال تکمیل">
+        <div class="ph"><img src="images/kitchen-modern-3.jpg" alt="اجرای کابینت آشپزخانه مدرن در حال تکمیل"></div>
+        <div class="cap"><div class="tag">کابینت مدرن</div><div class="name">اجرای آشپزخانه، در حال تکمیل</div></div>
+      </div>
+
+      <div class="gallery-item show" data-category="wardrobe" data-caption="کمد دیواری با قفسه‌بندی جانبی">
+        <div class="ph"><img src="images/wardrobe-2.jpg" alt="کمد دیواری با قفسه‌بندی جانبی چوبی"></div>
+        <div class="cap"><div class="tag">کمد دیواری</div><div class="name">با قفسه‌بندی جانبی</div></div>
+      </div>
+
+      <div class="gallery-item show" data-category="classic" data-caption="آشپزخانه ال‌شکل کلاسیک">
+        <div class="ph"><img src="images/kitchen-classic-4.jpg" alt="کابینت آشپزخانه کلاسیک ال‌شکل"></div>
+        <div class="cap"><div class="tag">کابینت کلاسیک</div><div class="name">آشپزخانه ال‌شکل کلاسیک</div></div>
+      </div>
+
+      <div class="gallery-item show" data-category="modern" data-caption="ترکیب رنگ خاکی و چوب طبیعی">
+        <div class="ph"><img src="images/kitchen-modern-4.jpg" alt="کابینت آشپزخانه مدرن، ترکیب رنگ خاکی و چوب"></div>
+        <div class="cap"><div class="tag">کابینت مدرن</div><div class="name">ترکیب رنگ خاکی و چوب</div></div>
+      </div>
+
+      <div class="gallery-item show" data-category="modern" data-caption="طراحی مینیمال آشپزخانه">
+        <div class="ph"><img src="images/kitchen-modern-5.jpg" alt="طراحی مینیمال کابینت آشپزخانه مدرن"></div>
+        <div class="cap"><div class="tag">کابینت مدرن</div><div class="name">طراحی مینیمال آشپزخانه</div></div>
+      </div>
+
+      <div class="gallery-item show" data-category="wardrobe" data-caption="کمد دیواری با کشوهای پایین">
+        <div class="ph"><img src="images/wardrobe-3.jpg" alt="کمد دیواری با کشوهای پایین و قفسه چوبی"></div>
+        <div class="cap"><div class="tag">کمد دیواری</div><div class="name">با کشوهای پایین و قفسه چوبی</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= ABOUT ============================= -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about-media reveal">
+      <img src="images/kitchen-modern-1.jpg" alt="نمونه‌ی اجرای کابینت البرز">
+      <div class="badge glass-dark">
+        <span class="mark"><img src="images/mountain-mark.png" alt=""></span>
+        <p>بهترین برگه‌ی اعتبار ما، خودِ کاری است که ساخته‌ایم.</p>
+      </div>
+    </div>
+    <div class="about-copy reveal">
+      <span class="eyebrow">درباره ما</span>
+      <h2 style="font-size:clamp(28px,3.6vw,44px);margin-bottom:22px;">کابینت البرز</h2>
+      <p class="lede">
+        کابینت البرز، شاخه‌ی کابینت‌سازی و دکوراسیون داخلی گروه صنعتی البرز است —
+        مجموعه‌ای که ریشه‌اش به سال ۱۳۴۶ و بندرعباس می‌رسد.
+      </p>
+      <p>
+        گروه صنعتی البرز را حیدر صمیمی، با ساخت درب و پنجره‌ی آهنی، بنیان گذاشت و طی بیش از نیم قرن
+        به یکی از شناخته‌شده‌ترین مجموعه‌های صنعتی هرمزگان تبدیل شد — از جمله با ساخت و اجرای
+        مجتمع ۴۵۰ واحدی نگین خلیج فارس، که هنوز هم بزرگ‌ترین پروژه‌ی اجراشده در بندرعباس است.
+        نسل بعدی این خانواده، شاخه‌ی کابینت و دکوراسیون داخلی را به این میراث افزود؛ کابینت البرز
+        امروز با همان نگاه، روی طراحی و اجرای کابینت آشپزخانه، کار با MDF و PVC، دکوراسیون داخلی و
+        آینه‌های دکوراتیو متمرکز است.
+      </p>
+      <ul class="about-list">
+        <li><svg><use href="#icon-check"/></svg>طراحی اختصاصی برای هر فضا</li>
+        <li><svg><use href="#icon-check"/></svg>اجرا با چوب، MDF و PVC</li>
+        <li><svg><use href="#icon-check"/></svg>دکوراسیون داخلی هماهنگ با کابینت</li>
+        <li><svg><use href="#icon-check"/></svg>آینه‌های دکوراتیو سفارشی</li>
+      </ul>
+
+      <div class="about-stats">
+        <div class="stat">
+          <span class="num">۱۳۴۶</span>
+          <span class="lbl">سال تأسیس گروه</span>
+        </div>
+        <div class="stat">
+          <span class="num">+۵۰</span>
+          <span class="lbl">سال تجربه</span>
+        </div>
+        <div class="stat">
+          <span class="num">هزاران</span>
+          <span class="lbl">پروژه‌ی اجراشده</span>
+        </div>
+        <div class="stat">
+          <span class="num">۴۵۰</span>
+          <span class="lbl">واحد، در بزرگ‌ترین پروژه</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= CLOSING QUOTE ============================= -->
+<section class="closing-quote">
+  <div class="wrap reveal">
+    <span class="quote-mark">”</span>
+    <p>
+      دوست داریم وقتی مشتری اسم «البرز» را می‌شنود، با خیالی آسوده در خانه‌ی خودش بنشیند
+      و بی‌دغدغه منتظر آماده‌شدن سفارشش باشد.
+    </p>
+    <span class="quote-by">از خانواده‌ی البرز</span>
+  </div>
+</section>
+
+<!-- ============================= CONTACT ============================= -->
+<section class="contact" id="contact">
+  <div class="wrap wrap-inner">
+    <div class="contact-info reveal">
+      <div class="section-head on-dark">
+        <span class="eyebrow">تماس با ما</span>
+        <h2>با ما در ارتباط باشید</h2>
+        <p>برای مشاوره، بازدید یا استعلام قیمت پروژه‌ی خود، از راه‌های زیر با ما در تماس باشید.</p>
+      </div>
+
+      <div class="contact-rows">
+        <div class="contact-row">
+          <svg><use href="#icon-pin"/></svg>
+          <div>
+            <div class="label">آدرس</div>
+            <div class="val">بندرعباس، خیابان مرحوم گرمساری، روبروی امامزاده سید کامل</div>
+          </div>
+        </div>
+        <div class="contact-row">
+          <svg><use href="#icon-phone"/></svg>
+          <div>
+            <div class="label">تلفن تماس</div>
+            <div class="val" id="phoneField"><span class="soon">به‌زودی تکمیل می‌شود</span></div>
+          </div>
+        </div>
+        <div class="contact-row">
+          <svg><use href="#icon-insta"/></svg>
+          <div>
+            <div class="label">اینستاگرام</div>
+            <div class="val" id="instaField"><span class="soon">به‌زودی تکمیل می‌شود</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-cta">
+        <a href="https://maps.app.goo.gl/iWbDPdgA3B81owJV7" target="_blank" rel="noopener" class="btn btn-line">مسیریابی در گوگل مپ <svg><use href="#icon-arrow"/></svg></a>
+      </div>
+    </div>
+
+    <div class="contact-map reveal">
+      <iframe
+        src="https://www.google.com/maps?q=27.1842333,56.2688621&hl=fa&z=16&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="موقعیت کابینت البرز روی نقشه">
+      </iframe>
+      <div class="map-tag glass-dark">
+        <div class="en">کابینت البرز</div>
+        <a href="https://maps.app.goo.gl/iWbDPdgA3B81owJV7" target="_blank" rel="noopener">مشاهده در گوگل مپ <svg><use href="#icon-arrow"/></svg></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="ridge-divider" style="color:var(--charcoal-2)">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none"><path d="M0,60 L0,40 L120,50 L260,20 L400,45 L560,10 L700,38 L860,22 L1000,48 L1160,18 L1300,42 L1440,28 L1440,60 Z" fill="currentColor"/></svg>
+  </div>
+</section>
+
+<!-- ============================= FOOTER ============================= -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-brand">
+      <span class="mark"><img src="images/mountain-mark.png" alt=""></span>
+      <span>ALBORZ GROUP</span>
+    </div>
+    <nav class="footer-links">
+      <a href="#home">خانه</a>
+      <a href="#services">خدمات</a>
+      <a href="#projects">پروژه‌ها</a>
+      <a href="#contact">تماس</a>
+    </nav>
+    <div class="footer-fine">© <span id="year"></span> کابینت البرز — تمامی حقوق محفوظ است.</div>
+  </div>
+</footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lbClose"><svg style="width:16px;height:16px"><use href="#icon-close"/></svg></button>
+  <button class="lightbox-nav prev" id="lbPrev"><svg style="transform:scaleX(-1)"><use href="#icon-arrow"/></svg></button>
+  <img id="lbImg" src="" alt="">
+  <button class="lightbox-nav next" id="lbNext"><svg><use href="#icon-arrow"/></svg></button>
+  <div class="lightbox-cap" id="lbCap"></div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
