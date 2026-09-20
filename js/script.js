@@ -97,14 +97,16 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ---------------- Contact config injection ---------------- */
-  const phoneField = document.getElementById('phoneField');
-  if (SITE.phone) {
-    phoneField.innerHTML = `<a href="${SITE.phoneHref || '#'}" dir="ltr">${SITE.phone}</a>`;
-  }
-  const instaField = document.getElementById('instaField');
-  if (SITE.instagram) {
-    instaField.innerHTML = `<a href="https://instagram.com/${SITE.instagram}" target="_blank" rel="noopener" dir="ltr">@${SITE.instagram}</a>`;
-  }
+  document.querySelectorAll('#phoneField').forEach(el => {
+    el.innerHTML = SITE.phone
+      ? `<a href="${SITE.phoneHref || '#'}" dir="ltr">${SITE.phone}</a>`
+      : '<span class="soon">به‌زودی تکمیل می‌شود</span>';
+  });
+  document.querySelectorAll('#instaField').forEach(el => {
+    el.innerHTML = SITE.instagram
+      ? `<a href="https://instagram.com/${SITE.instagram}" target="_blank" rel="noopener" dir="ltr">@${SITE.instagram}</a>`
+      : '<span class="soon">به‌زودی تکمیل می‌شود</span>';
+  });
 
   /* ---------------- Header on scroll ---------------- */
   const header = document.getElementById('siteHeader');
@@ -140,30 +142,32 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
   revealEls.forEach(el => io.observe(el));
 
-  /* ---------------- Gallery filter ---------------- */
+  /* ---------------- Gallery filter (only on pages with a gallery) ---------------- */
   const filterTabs = document.getElementById('filterTabs');
   const galleryItems = Array.from(document.querySelectorAll('.gallery-item'));
 
-  filterTabs.addEventListener('click', (e) => {
-    const btn = e.target.closest('button');
-    if (!btn) return;
-    filterTabs.querySelectorAll('button').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    const filter = btn.dataset.filter;
+  if (filterTabs) {
+    filterTabs.addEventListener('click', (e) => {
+      const btn = e.target.closest('button');
+      if (!btn) return;
+      filterTabs.querySelectorAll('button').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
 
-    galleryItems.forEach(item => {
-      const match = filter === 'all' || item.dataset.category === filter;
-      if (match) {
-        item.classList.remove('hide-item');
-        requestAnimationFrame(() => item.classList.add('show'));
-      } else {
-        item.classList.remove('show');
-        item.classList.add('hide-item');
-      }
+      galleryItems.forEach(item => {
+        const match = filter === 'all' || item.dataset.category === filter;
+        if (match) {
+          item.classList.remove('hide-item');
+          requestAnimationFrame(() => item.classList.add('show'));
+        } else {
+          item.classList.remove('show');
+          item.classList.add('hide-item');
+        }
+      });
     });
-  });
+  }
 
-  /* ---------------- Lightbox ---------------- */
+  /* ---------------- Lightbox (only on pages with a gallery) ---------------- */
   const lightbox = document.getElementById('lightbox');
   const lbImg = document.getElementById('lbImg');
   const lbCap = document.getElementById('lbCap');
@@ -171,48 +175,51 @@ document.addEventListener('DOMContentLoaded', () => {
   const lbPrev = document.getElementById('lbPrev');
   const lbNext = document.getElementById('lbNext');
 
-  let currentIndex = 0;
-  const getVisibleItems = () => galleryItems.filter(i => !i.classList.contains('hide-item'));
+  if (lightbox && lbImg && lbClose && lbPrev && lbNext) {
+    let currentIndex = 0;
+    const getVisibleItems = () => galleryItems.filter(i => !i.classList.contains('hide-item'));
 
-  function openLightbox(item) {
-    const visible = getVisibleItems();
-    currentIndex = visible.indexOf(item);
-    renderLightbox(visible);
-    lightbox.classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-  function renderLightbox(visible) {
-    const item = visible[currentIndex];
-    const img = item.querySelector('img');
-    lbImg.src = img.src;
-    lbImg.alt = img.alt;
-    lbCap.textContent = item.dataset.caption || '';
-  }
-  function closeLightbox() {
-    lightbox.classList.remove('open');
-    document.body.style.overflow = '';
-  }
-  function step(dir) {
-    const visible = getVisibleItems();
-    currentIndex = (currentIndex + dir + visible.length) % visible.length;
-    renderLightbox(visible);
-  }
+    function openLightbox(item) {
+      const visible = getVisibleItems();
+      currentIndex = visible.indexOf(item);
+      renderLightbox(visible);
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function renderLightbox(visible) {
+      const item = visible[currentIndex];
+      const img = item.querySelector('img');
+      lbImg.src = img.src;
+      lbImg.alt = img.alt;
+      if (lbCap) lbCap.textContent = item.dataset.caption || '';
+    }
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    function step(dir) {
+      const visible = getVisibleItems();
+      currentIndex = (currentIndex + dir + visible.length) % visible.length;
+      renderLightbox(visible);
+    }
 
-  galleryItems.forEach(item => {
-    item.addEventListener('click', () => openLightbox(item));
-  });
-  lbClose.addEventListener('click', closeLightbox);
-  lbPrev.addEventListener('click', () => step(-1));
-  lbNext.addEventListener('click', () => step(1));
-  lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
-  document.addEventListener('keydown', (e) => {
-    if (!lightbox.classList.contains('open')) return;
-    if (e.key === 'Escape') closeLightbox();
-    if (e.key === 'ArrowLeft') step(document.documentElement.dir === 'rtl' ? 1 : -1);
-    if (e.key === 'ArrowRight') step(document.documentElement.dir === 'rtl' ? -1 : 1);
-  });
+    galleryItems.forEach(item => {
+      item.addEventListener('click', () => openLightbox(item));
+    });
+    lbClose.addEventListener('click', closeLightbox);
+    lbPrev.addEventListener('click', () => step(-1));
+    lbNext.addEventListener('click', () => step(1));
+    lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', (e) => {
+      if (!lightbox.classList.contains('open')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') step(document.documentElement.dir === 'rtl' ? 1 : -1);
+      if (e.key === 'ArrowRight') step(document.documentElement.dir === 'rtl' ? -1 : 1);
+    });
+  }
 
   /* ---------------- Footer year ---------------- */
-  document.getElementById('year').textContent = new Date().getFullYear();
+  const yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 });
