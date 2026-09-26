@@ -1,23 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://alborzgroup.net/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://alborzgroup.net/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alborzgroup.net/en/"/>
   </url>
   <url>
     <loc>https://alborzgroup.net/woodwork/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://alborzgroup.net/woodwork/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alborzgroup.net/en/woodwork/"/>
   </url>
   <url>
     <loc>https://alborzgroup.net/metalwork/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://alborzgroup.net/metalwork/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alborzgroup.net/en/metalwork/"/>
   </url>
   <url>
     <loc>https://alborzgroup.net/investment/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://alborzgroup.net/investment/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alborzgroup.net/en/investment/"/>
+  </url>
+  <url>
+    <loc>https://alborzgroup.net/en/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://alborzgroup.net/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alborzgroup.net/en/"/>
+  </url>
+  <url>
+    <loc>https://alborzgroup.net/en/woodwork/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://alborzgroup.net/woodwork/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alborzgroup.net/en/woodwork/"/>
+  </url>
+  <url>
+    <loc>https://alborzgroup.net/en/metalwork/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://alborzgroup.net/metalwork/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alborzgroup.net/en/metalwork/"/>
+  </url>
+  <url>
+    <loc>https://alborzgroup.net/en/investment/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://alborzgroup.net/investment/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alborzgroup.net/en/investment/"/>
   </url>
 </urlset>

@@ -180,6 +180,7 @@ section { position: relative; }
 .btn svg { width: 15px; height: 15px; transition: transform .4s var(--ease-soft); }
 .btn:hover svg { transform: translateX(-3px); }
 [dir="rtl"] .btn:hover svg { transform: translateX(3px); }
+[dir="ltr"] .btn:hover svg { transform: translateX(3px); }
 
 /* Ridge divider (signature motif) used between sections */
 .ridge-divider { line-height: 0; width: 100%; }
@@ -255,6 +256,23 @@ section { position: relative; }
 .branch-pills a:hover { opacity: 1; background: rgba(255,255,255,.08); }
 .branch-pills a.active { opacity: 1; background: var(--gold); color: var(--ink); font-weight: 600; }
 
+/* Language switcher — small pill link between a page and its fa/en counterpart */
+.lang-switch {
+  font-family: var(--f-body);
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: .04em;
+  color: var(--ivory);
+  opacity: .75;
+  border: 1px solid rgba(255,255,255,.22);
+  border-radius: var(--r-pill);
+  padding: 8px 14px;
+  white-space: nowrap;
+  transition: all .35s var(--ease-soft);
+}
+.lang-switch:hover { opacity: 1; border-color: var(--gold-line); background: rgba(255,255,255,.06); }
+.mobile-panel .lang-switch { border: 1px solid rgba(255,255,255,.22); text-align: center; }
+
 .branch-tag {
   display: inline-flex;
   align-items: center;
@@ -296,6 +314,7 @@ section { position: relative; }
 .branch-card .go svg { width: 15px; height: 15px; transition: transform .4s var(--ease-soft); }
 .branch-card:hover .go svg { transform: translateX(-4px); }
 [dir="rtl"] .branch-card:hover .go svg { transform: translateX(4px); }
+[dir="ltr"] .branch-card:hover .go svg { transform: translateX(4px); }
 
 /* Multi-office contact layout */
 .offices-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 10px; }

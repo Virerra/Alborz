@@ -97,15 +97,19 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ---------------- Contact config injection ---------------- */
+  const isEnglish = document.documentElement.lang === 'en';
+  const comingSoon = isEnglish
+    ? '<span class="soon">coming soon</span>'
+    : '<span class="soon">به‌زودی تکمیل می‌شود</span>';
   document.querySelectorAll('#phoneField').forEach(el => {
     el.innerHTML = SITE.phone
       ? `<a href="${SITE.phoneHref || '#'}" dir="ltr">${SITE.phone}</a>`
-      : '<span class="soon">به‌زودی تکمیل می‌شود</span>';
+      : comingSoon;
   });
   document.querySelectorAll('#instaField').forEach(el => {
     el.innerHTML = SITE.instagram
       ? `<a href="https://instagram.com/${SITE.instagram}" target="_blank" rel="noopener" dir="ltr">@${SITE.instagram}</a>`
-      : '<span class="soon">به‌زودی تکمیل می‌شود</span>';
+      : comingSoon;
   });
 
   /* ---------------- Header on scroll ---------------- */
